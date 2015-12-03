@@ -1,0 +1,34 @@
+Readme for postprocessing of ROV log data 3D extraction:
+
+
+------"helper" methods in this folder ------
+
+arrow.m --> ARROW  Draw a line with an arrowhead.
+arrow3d.m --> Plot 3d Arrows
+
+drawROV.m --> draw row at drawROV(position,attitude)
+rot3d.m --> rot3d(phi,theta,psi)  returns the rotation matrix R
+ticklabelformat.m --->  Sets axis tick labels format USING ticklabelformat(hAxes,axName,format)
+rotatedata.m --> rotatedata(xdata,ydata,zdata,azel,alpha,origin)
+
+
+------ "testing" methods to plot etc in this folder -----
+track.m --> plot only the track
+dataForBottomDepth.m --> From picture number find index of x-y position on path
+
+
+
+------Most Important methodes/functions  ------
+readLogFile.m --> readLogFile(path) reads the file 'path' and returns its content in arrays
+
+-----Create .mat files---------------------------
+navDataPic.m --> PRODUCES THE .MAT FILE linLocApproxData.mat
+seaBottomApprox.m --> Post processing of DVL data to approximate the seabottom PRODUSE seaBottomApprox.mat
+
+------- missing methods ----------
+post_pro_minerva.m
+
+indTag.m --> function in dataForBottomDepth.m is mising
+
+navDataPic need time.str
+% Need to load in time.str somehow??
